@@ -22,9 +22,14 @@ const killedVillagers = (n: number): number => {
     }, 0)
 }
 
+interface Villager {
+    age: number
+    death: number
+}
+
 const main = (age1: number, death1: number, age2: number, death2: number) => {
-    const villagerA: { age: number, death: number } = { age: age1, death: death1 }
-    const villagerB: { age: number, death: number } = { age: age2, death: death2 }
+    const villagerA: Villager = { age: age1, death: death1 }
+    const villagerB: Villager = { age: age2, death: death2 }
 
     let totalKilledVillagers: number = 0
 
