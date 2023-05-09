@@ -32,9 +32,10 @@ const main = () => {
 
     villagers.map(villager => {
         totalKilledVillagers += killedVillagers(villager.death-villager.age)
-        console.log(killedVillagers(villager.death-villager.age))
     })
 
     const averageKilledVillagers = totalKilledVillagers / 2
     return averageKilledVillagers
 }
+
+console.log(main())
