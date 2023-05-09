@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "compile": "tsc",
     "start": "ts-node src/index.ts",
     "test": "jest"
