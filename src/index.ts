@@ -13,3 +13,11 @@ const fibonacciSequences = (n: number): number[] => {
         return arr
     }
 }
+
+const killedVillagers = (n: number): number => {
+    const fibonacci = fibonacciSequences(n)
+
+    return fibonacci.reduce((total, current) => {
+        return total + current;
+    }, 0)
+}
