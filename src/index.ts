@@ -21,3 +21,20 @@ const killedVillagers = (n: number): number => {
         return total + current;
     }, 0)
 }
+
+const main = () => {
+    const villagerA: { age: number, death: number } = { age: 10, death: 12 }
+    const villagerB: { age: number, death: number } = { age: 13, death: 17 }
+
+    let totalKilledVillagers: number = 0
+
+    const villagers = [villagerA, villagerB]
+
+    villagers.map(villager => {
+        totalKilledVillagers += killedVillagers(villager.death-villager.age)
+        console.log(killedVillagers(villager.death-villager.age))
+    })
+
+    const averageKilledVillagers = totalKilledVillagers / 2
+    return averageKilledVillagers
+}
