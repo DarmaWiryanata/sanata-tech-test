@@ -22,9 +22,9 @@ const killedVillagers = (n: number): number => {
     }, 0)
 }
 
-const main = () => {
-    const villagerA: { age: number, death: number } = { age: 10, death: 12 }
-    const villagerB: { age: number, death: number } = { age: 13, death: 17 }
+const main = (age1: number, death1: number, age2: number, death2: number) => {
+    const villagerA: { age: number, death: number } = { age: age1, death: death1 }
+    const villagerB: { age: number, death: number } = { age: age2, death: death2 }
 
     let totalKilledVillagers: number = 0
 
@@ -38,4 +38,4 @@ const main = () => {
     return averageKilledVillagers
 }
 
-console.log(main())
+console.log(main(10, 12, 13, 17))
