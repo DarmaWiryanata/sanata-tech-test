@@ -27,7 +27,7 @@ interface Villager {
     death: number
 }
 
-const main = (age1: number, death1: number, age2: number, death2: number) => {
+export const main = (age1: number, death1: number, age2: number, death2: number) => {
     const villagerA: Villager = { age: age1, death: death1 }
     const villagerB: Villager = { age: age2, death: death2 }
 
