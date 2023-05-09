@@ -34,13 +34,23 @@ const main = (age1: number, death1: number, age2: number, death2: number) => {
     let totalKilledVillagers: number = 0
 
     const villagers = [villagerA, villagerB]
-
-    villagers.map(villager => {
-        totalKilledVillagers += killedVillagers(villager.death-villager.age)
+    
+    // Check whether the villager age is valid
+    let ageIsValid = true
+    villagers.forEach(villager => {
+        if (villager.death - villager.age < 1) ageIsValid = false
     })
 
-    const averageKilledVillagers = totalKilledVillagers / 2
-    return averageKilledVillagers
+    if (ageIsValid) {
+        villagers.map(villager => {
+            totalKilledVillagers += killedVillagers(villager.death-villager.age)
+        })
+
+        const averageKilledVillagers = totalKilledVillagers / 2
+        return averageKilledVillagers
+    } else { 
+        return -1
+    }
 }
 
 console.log(main(10, 12, 13, 17))
